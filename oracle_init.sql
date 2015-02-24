@@ -1,0 +1,15 @@
+CREATE TABLE "SALARIES"
+  (
+    "ID"          NUMBER,
+    "SALARY_DATE" DATE,
+    "SALARY"      NUMBER,
+    PRIMARY KEY ("ID")
+  );
+
+CREATE TABLE "WORKERS"
+  (
+    "ID"          NUMBER,
+    "FIRST_NAME"  VARCHAR2(100 CHAR),
+    "LAST_NAME"   VARCHAR2(100 CHAR),
+    PRIMARY KEY ("ID")
+  );

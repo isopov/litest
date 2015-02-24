@@ -1,0 +1,6 @@
+#changeLogFile=EXTRA2.xml
+changeLogFile=EXTRA.xml
+username=litest
+password=litest
+#url=jdbc:oracle:thin:@10.20.2.79:1521/XE
+url=jdbc:postgresql:postgres
