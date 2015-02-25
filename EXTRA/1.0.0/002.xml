@@ -2,7 +2,9 @@
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
-    <include file="CORE/1.0.0/001.xml" />
-    <include file="CORE/1.0.0/002.xml" />
+    <changeSet author="ivan.sopov" id="JIRAEXTRA-2">
+	<createView 
+            replaceIfExists="true"
+            viewName="v_library_managers">select m.id, m.first_name, m.second_name, m.last_name, l.id as library_id from workers w join workers m on w.manager_id=m.id join library l on w.id=l.worker_id</createView>
+    </changeSet>
 </databaseChangeLog>
-
